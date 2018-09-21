@@ -1,0 +1,479 @@
+<style type="text/css">
+    /*BODY*/
+    #pageBody {
+        padding:0;
+    }
+    #banner_slider_wrapper {
+        margin-bottom:0;
+    }
+    .banner_cta {
+        padding:5px 40px;
+        border:1px solid;
+        border-radius:30px;
+        font-size:14px;
+        color:#fff;
+    }
+    .in-stock-cta{
+        background-color: #0086AC;
+        position: absolute;
+        top: 48%;
+        left: 10%;
+        z-index: 9999
+    }
+    .old-and-new-cta{
+        background-color: #0086AC;
+        position: absolute;
+        top: 48%;
+        left: 7%;
+        z-index: 9999
+    }
+    .order-fast-cta{
+        background-color: #0086AC;
+        position: absolute;
+        top: 48%;
+        left: 15%;
+        z-index: 9999
+    }
+    .in-stock-cta:hover, .old-and-new-cta:hover, .order-fast-cta:hover{
+        color:#0086AC;
+        background-color: white;
+    }
+
+    /*.owl-theme-products-carousel .owl-nav {
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 50%;
+        margin-top: -30px;
+    }
+    */
+    .drinkware_banner {
+        /*background:url('/assets/img/banner_drinkware_v2.jpg') no-repeat center;*/
+        /*height:425px;*/
+        /*overflow:hidden;*/
+        position:relative;
+    }
+    .drinkware_banner h4.category_cta_header {
+        position: absolute;
+        color: #fff;
+        top: 18%;
+        left: 19%;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        z-index:9999;
+    }
+    .drinkware_banner .banner_cta {
+        position: absolute;
+    top: 48%;
+    left: 19%;
+    z-index:9999;
+    }
+    .drinkware_banner .banner_cta:hover {
+        color:#0085ad;
+        border-color:#fff;
+        background-color:#fff;
+    }
+    .category_office {
+        background-color:#0085ad;
+        background-clip: content-box;
+    }
+    .category_office h4.category_cta_header {
+        position: absolute;
+        color: #fff;
+        top: 13%;
+        left: 55%;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        z-index:9999;
+    }
+    .category_office .banner_cta {
+        position: absolute;
+    top: 40%;
+    left: 55%;
+    z-index:9999;
+    }
+    .category_office .banner_cta:hover {
+        color:#0085ad;
+        border-color:#fff;
+        background-color:#fff;
+    }
+    .category_bags {
+        background-color:#e57200;
+        background-clip: content-box;
+    }
+    .category_bags h4.category_cta_header {
+        position: absolute;
+        color: #fff;
+        top: 12%;
+        left: 16%;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        z-index:9999;
+    }
+    .category_bags .banner_cta {
+        position: absolute;
+    top: 40%;
+    left: 16%;
+    z-index:9999;
+    }
+    .category_bags .banner_cta:hover {
+        color:#0085ad;
+        border-color:#fff;
+        background-color:#fff;
+    }
+    .products_carousel_wrapper .product {
+        margin:0 20px;
+    }
+    .products_carousel_wrapper .product .fi-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    }
+    .products_carousel_wrapper .product .fi-overlay:hover {
+        background: rgba(110,190,195,0.7);
+         -webkit-transition: background-color 0.1s ease-out;
+      -moz-transition: background-color 0.1s ease-out;
+      -o-transition: background-color 0.1s ease-out;
+      transition: background-color 0.1s ease-out;
+    }
+    .products_carousel_wrapper .product_info_div {
+        position:absolute;
+        width:100%;
+        top:33%;
+        left:0;
+        text-align: center;
+        display:none;
+        color:#fff;
+        font-weight:bold;
+        text-shadow: -1px -1px 0 #000000;
+    }
+    .products_carousel_wrapper .fi-overlay:hover .product_info_div {
+        display:block;
+    }
+    .need_help_wrapper {
+        background:url('/assets/img/img_cantfind_v2.jpg') no-repeat center;
+        height:260px;
+    }
+    .need_help_wrapper h3 {
+        color:#fff;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 0px;
+    padding-top: 12px;
+    line-height: 34px;
+    }
+    .need_help_wrapper p {
+        color:#fff;
+        font-size:15px;
+
+    }
+    .need_help_wrapper .banner_cta {
+        margin-top:12px;
+        display:inline-block;
+    }
+    .need_help_wrapper .banner_cta:hover {
+        color:#0085ad;
+        border-color:#fff;
+        background-color:#fff;
+    }
+    .banner_slider_theme.products_carousel_wrapper:hover .owl-nav .owl-prev {
+        left:-30px;
+    }
+    .banner_slider_theme.products_carousel_wrapper:hover .owl-nav .owl-next {
+        right:-30px;
+    }
+    #banner_slider h4.category_cta_header {
+        position: absolute;
+        color: #0086AC;
+        top: 18%;
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        z-index:9999;
+        text-transform: uppercase;
+    }
+    #banner_slider .slide-one h4{
+        left: 10%;
+    }
+    #banner_slider .slide-two h4{
+        left: 7%;
+    }
+    #banner_slider .slide-three h4{
+        left: 15%
+    }
+    @media (max-width: 767px){
+        .banner_cta {
+            display:none!important;
+        }
+        .drinkware_banner h4.category_cta_header {
+            position: absolute;
+        top: 0;
+        left: 3%;
+        font-size: 20px;
+        }
+        .category_office h4.category_cta_header {
+            position: absolute;
+        top: 2%;
+        left: 55%;
+        }
+        .category_bags h4.category_cta_header {
+            position: absolute;
+        top: 3%;
+        left: 5%;	
+        }
+        .category_box_xylem {
+            margin-top:-20px;
+        }
+        .need_help_wrapper {
+            background: url(/assets/img/img_cantfind_v2.jpg) no-repeat -560px;
+        }
+        .need_help_wrapper h3 {
+            padding-top:30px;
+        }
+        #banner_slider .slide-one h4{
+            left: 2%;
+            font-size: 20px;
+        }
+        #banner_slider .slide-two h4{
+            left: 0%;
+            font-size: 20px;
+        }
+        #banner_slider .slide-three h4{
+             left: 2%;
+             font-size: 20px;
+        }
+    }
+    @media (min-width: 768px){
+        .category_box_xylem {
+            height:391px;
+        }
+        .category_office {
+            padding-right:0;
+        }
+        .category_bags {
+            padding-left:0;
+        }
+        .office_supp_image {
+            position:absolute;
+            bottom:0;
+            left:5%;
+        }
+        .bags_image {
+            position:absolute;
+            right:15px;
+            bottom:0;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .in-stock-cta, .old-and-new-cta, .order-fast-cta{
+            top: 53%;
+        }
+    }
+    @media(min-width: 757px) and (max-width: 991px){
+        .in-stock-cta, .old-and-new-cta, .order-fast-cta, .drinkware_banner .banner_cta{
+            top: 62%;
+        }
+    }
+    @media (min-width: 1200px) {
+        .category_office .banner_cta {
+            top:40%;
+        }
+    }
+</style>
+
+<div id="banner_slider_wrapper">
+    <div class="row gutter-0">
+        <div class="col-sm-12">
+            <div id="banner_slider" class="banner_slider_theme owl-carousel">
+                <div class="slide_item slide-one" data-hash="slide1">
+                    <h4 class="category_cta_header">Welcome<br />to our store</h4>
+                    <a class="banner_cta in-stock-cta" href="/category/20001/In-Stock.html" >SHOP-IN-STOCK ITEMS NOW</a>
+                    <img src="/assets/img/hero_homepage_1_v2.jpg" class="img-responsive">
+                </div>
+                <div class="slide_item slide-two" data-hash="slide2">
+                    <h4 class="category_cta_header">Out with the old<br />and in with the new</h4>
+                    <a class="banner_cta old-and-new-cta" href="/category/20072/Sale.html" >CHECK OUT OUR SALE ITEMS</a>
+                    <img src="/assets/img/hero_homepage_slide2.jpg" class="img-responsive">
+                </div>
+                <div class="slide_item slide-three" data-hash="slide3">
+                    <h4 class="category_cta_header">check out our<br />custom items</h4>
+                    <a class="banner_cta order-fast-cta" href="/category/20002/Made-To-Order-Fast.html" >GO TO MADE TO ORDER ITEMS</a>
+                    <img src="/assets/img/hero_homepage_slide3.jpg" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ========== END Banner Slider ========== -->
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="drinkware_banner">
+            <a href="/category/20005/Drinkware.html">
+                <div class="drinkware_cta">
+                    <h4 class="category_cta_header">ECO FRIENDLY<br />DRINKWARE</h4>
+                    <a class="banner_cta" href="/category/20005/Drinkware.html" >SHOP NOW</a> 
+                    <img src="/assets/img/banner_drinkware_v3.jpg" width="1400" height="425" class="img-responsive center-block">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-6 category_office">
+        <div class="category_box_xylem">
+            <a href="/category/20006/Office-Items.html">
+                <h4 class="category_cta_header">OFFICE<br />SUPPLIES</h4>
+                <a href="/category/20006/Office-Items.html" class="banner_cta">SHOP NOW</i></a>
+                <img src="/assets/img/office_supplies.png" class="img-responsive office_supp_image">
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-6 category_bags">
+        <div class="category_box_xylem">
+            <a href="/category/20060/Bags.html">
+                <h4 class="category_cta_header">BAGS TO FIT<br />YOUR BUDGET</h4>
+                <a href="/category/20060/Bags.html" class="banner_cta">SHOP NOW</i></a>
+                <img src="/assets/img/bags_banner_v2.png" class="img-responsive bags_image">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="section_title_wrapper clearfix">
+    <h3 class="section_title text-center">FEATURED ITEMS</h3>
+</div>
+<div class="row">
+    <div class="col-sm-10 center-block" style="float:none;">
+        <div class="products_carousel_wrapper banner_slider_theme owl-carousel">
+            <div class="product">
+                <a href="/product/XYL-129/FLEX-WATER-BOTTLE-W--CARABINER.html">
+                    <div class="product_image_div">
+                        <img class="item" src="/assets/Image/Product/detailsbig/XYL-129.jpg">
+                    </div>
+                    <div class="fi-overlay">
+                        <div class="product_info_div">
+                            <div class="product_name">Flex Water Bottle W/ Carabiner</div>
+                            <div class="product_desc"></div>
+                            <div class="product_price">$1.17</div>
+                        </div>
+                    </div>
+                </a>	
+            </div>
+            <div class="product">
+                <a href="/product/XYL-140/WATERPROOF-OUTDOOR-BAG.html">
+                    <div class="product_image_div">
+                        <img class="item" src="/assets/Image/Product/detailsbig/XYL-140.jpg">
+                    </div>
+                    <div class="fi-overlay">
+                        <div class="product_info_div">
+                            <div class="product_name">Waterproof Outdoor Bag</div>
+                            <div class="product_desc"></div>
+                            <div class="product_price">$4.90</div>
+                        </div>
+                    </div>
+                </a>	
+            </div>
+            <div class="product">
+                <a href="/product/XYL-130/BISTRO-MUG.html">
+                    <div class="product_image_div">
+                        <img class="item" src="/assets/Image/Product/detailsbig/XYL-130.jpg">
+                    </div>
+                    <div class="fi-overlay">
+                        <div class="product_info_div">
+                            <div class="product_name">Bistro Mug</div>
+                            <div class="product_desc"></div>
+                            <div class="product_price">$5.00</div>
+                        </div>
+                    </div>
+                </a>	
+            </div>
+            <div class="product">
+                <a href="/product/XYL-063/WATER-DROP-STRESS-RELIEVER.html">
+                    <div class="product_image_div">
+                        <img class="item" src="/assets/Image/Product/detailsbig/XYL-063.jpg">
+                    </div>
+                    <div class="fi-overlay">
+                        <div class="product_info_div">
+                            <div class="product_name">Water Drop Stress Reliever</div>
+                            <div class="product_desc"></div>
+                            <div class="product_price">$1.15</div>
+                        </div>
+                    </div>
+                </a>	
+            </div>
+            <div class="product">
+                <a href="/product/XYL-038/TRADE-SHOW-BAG.html">
+                    <div class="product_image_div">
+                        <img class="item" src="/assets/Image/Product/detailsbig/XYL-038.jpg">
+                    </div>
+                    <div class="fi-overlay">
+                        <div class="product_info_div">
+                            <div class="product_name">Trade Show Bag</div>
+                            <div class="product_desc"></div>
+                            <div class="product_price">$.65</div>
+                        </div>
+                    </div>
+                </a>	
+            </div>
+            <div class="product">
+                <a href="/product/XYL-156-ORANGE/XYL-156-ORANGE.html">
+                    <div class="product_image_div">
+                        <img class="item" src="/assets/Image/Product/detailsbig/XYL-156ORG.jpg">
+                    </div>
+                    <div class="fi-overlay">
+                        <div class="product_info_div">
+                            <div class="product_name">Saftey Vest</div>
+                            <div class="product_desc"></div>
+                            <div class="product_price">$14.85</div>
+                        </div>
+                    </div>
+                </a>	
+            </div>
+            <div class="product">
+                <a href="/product/XYL-131/ADHESIVE-CUB.html">
+                    <div class="product_image_div">
+                        <img class="item" src="/assets/Image/Product/detailsbig/XYL-131.jpg">
+                    </div>
+                    <div class="fi-overlay">
+                        <div class="product_info_div">
+                            <div class="product_name">Adhesive Cub</div>
+                            <div class="product_desc"></div>
+                            <div class="product_price">$4.90</div>
+                        </div>
+                    </div>
+                </a>	
+            </div>
+            <div class="product">
+                <a href="/product/XYL-158-SAPPHIRE/XYL-158-SAPPHIRE.html">
+                    <div class="product_image_div">
+                        <img class="item" src="/assets/Image/Product/detailsbig/XYL-158SAP.jpg">
+                    </div>
+                    <div class="fi-overlay">
+                        <div class="product_info_div">
+                            <div class="product_name">Cotton T-Shirt</div>
+                            <div class="product_desc"></div>
+                            <div class="product_price">$5.50</div>
+                        </div>
+                    </div>
+                </a>	
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="need_help_wrapper">
+    <div class="col-sm-6 col-sm-offset-6">
+        <a href="/category/20012/Custom-Product-Request.html">
+            <h3 class="">CAN'T FIND WHAT YOU'RE LOOKING FOR? WE CAN HELP!</h3>
+            <p class="">We have 1,000's of additional items that we can provide, including completely custom orders and special requests. Click below for more information, or just email us at xylem@overturepromo.com.</p>
+            <a href="/category/20012/Custom-Product-Request.html" class="banner_cta">CONTACT US</a>
+        </a>
+    </div>
+</div>

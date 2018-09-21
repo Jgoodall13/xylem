@@ -1,0 +1,474 @@
+<style type="text/css">
+	/*HEADER*/
+        @font-face{
+              font-family: AvenirNextLTPro;
+              src: url(/assets/fonts/AvenirNextLTPro.otf);
+           }
+	body {
+                  font-family: AvenirNextLTPro;
+		//font-family: "FaktProSoft", "Helvetica Neue", helvetica, arial, sans-serif;
+	}
+	
+	#header_wrapper {
+		padding-bottom:0;
+		padding-top:0;
+	}
+	#header #logo {
+		padding:20px;
+	}
+	#header.container {
+    color: #fff;
+    background: url(/assets/img/header-background.png) no-repeat center;
+	}
+	#header .nav-tabs {
+		border-bottom:none;
+	}
+	#header_search {
+		position: absolute;
+		top:0;
+		left:18px;
+		margin-top:0;
+	}
+	#header_search .search {
+		position:relative;
+	}
+	#header_search .search input {
+	 text-indent: 30px;
+	 border-radius:30px;
+	 height:32px;
+	 width:140%;
+	}
+	#header_search .search .fa-search { 
+	  position: absolute;
+	  top: 6px;
+	  left: 12px;
+	  font-size: 20px;
+	  color:#808080;
+	  z-index:9999;
+	  background:#fff;
+	  border:none;
+	  padding:0;
+	}
+	.navbar-nav > li > a {
+		color:#fff;
+		padding-bottom: 0;
+	}
+	.nav-tabs > li > a {
+		border-radius:0;
+		color:#fff;
+	}
+	.nav-tabs >li > a:hover, .nav > li > a:hover {
+		background-color:#00969f;
+		border-color:#00969f;
+	}
+	.tab-content.main-nav {
+		position: absolute;
+		z-index: 9999;
+		background:#fff;
+		width: 100%;
+    left: 0;
+	}
+	.main-nav-uls {
+		padding-left:10px;
+	}
+	.tab-content.main-nav h4 {
+    border-bottom: 1px solid #0085ad;
+    margin-left: 10px;
+    color: #0085ad;
+    font-size:14px;
+    font-weight:bold;
+	}
+	.tab-content.main-nav li {
+		list-style-type: none;
+		line-height: 1.3;
+	}
+        .sub_categories_wrapper .sub_category_wrapper .sub_category_name_wrapper {
+		background-color:#3aa8bc;
+	}
+
+	/*MEDIA QUERIES*/
+	@media (max-width: 767px){
+		#header_search {
+			position: relative;
+		}
+		#header #logo {
+			margin-bottom:0;
+		}
+		#header.container {
+	    color: #fff;
+	    background:#3aa8bc;
+		}
+		.nav.nav-tabs {
+			width:100%;
+		}
+		.tab-content.main-nav li a {
+			color:#0085ad;
+			font-size:13px;
+			white-space: nowrap;
+		}
+		.tab-content.main-nav .category-nav.shop-by-brand li {
+			margin-bottom:4%;
+		}
+		.xylem_fix {
+			margin-top:0;
+		}
+		.bell_gossett_fix {
+			padding-top:0;
+		}
+	}
+	@media (min-width: 768px){
+		#header_wrapper .tab-pane .category-nav {
+			padding:30px 40px;
+		}
+		/*#header.container {
+			padding-left:80px;
+			padding-right:80px;
+		}*/
+		.tab-content.main-nav {
+			width: 750px;
+    	padding-left:0;
+    	padding-right:0;
+		}
+		#header_wrapper .tab-content.main-nav .category-nav.shop-by-brand {
+			padding-bottom:60px;
+		}
+		.tab-content.main-nav .category-nav.shop-by-brand h4 {
+			margin-left:10%;
+		}
+		.tab-content.main-nav .category-nav.shop-by-brand ul {
+			margin-left:7%;
+			padding-top:24px;
+		}
+		.tab-content.main-nav .category-nav.shop-by-brand li {
+			float:left;
+			margin-right:4%;
+		}
+		.xylem_fix {
+			margin-top:-8px;
+		}
+		.bell_gossett_fix {
+			padding-top:12px;
+		}
+	}
+	@media (min-width: 992px) and (max-width: 1199px) {
+		.tab-content.main-nav {
+			width: 970px;
+    	padding-left:5%;
+    	padding-right:5%;
+		}
+	}
+	@media (min-width: 1200px) {
+		/*.container {
+		    width: 1400px;
+		}*/
+		.tab-content.main-nav {
+			width: 1170px;
+    	padding-left:5%;
+    	padding-right:5%;
+		}
+	}
+
+
+	/* Making the mobile hamburger menu*/
+
+    #burger{
+        font-size: 50px;
+        float: right;
+        transition: .25s ease-in-out;
+        cursor: pointer;
+    }
+
+
+
+	@media (max-width: 767px){
+		.navbar-nav > li > a, #head-drop-down{
+			margin-left: 25px;
+		}
+		#head-search-box{
+			margin: 0;
+			padding: 0;
+		}
+		#header_search, #my-account, #shopping_cart, #head-drop-down{
+			display: none;
+		}
+        #header #logo{
+            text-align: left;
+            padding-left: 0px;
+        }
+	}
+
+    @media (min-width: 766px){
+        #burger{
+            display: none;
+        }
+        #header_search, #my-account, #shopping_cart, #head-drop-down{
+			display: block;
+		}
+    }
+</style>
+
+<div id="header_wrapper">
+	<div id="header" class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<div id="logo">
+					<a href="/home.jhtm">
+						<img src="/assets/img/main_logo_store.svg" alt="Xylem Let's Solve Water STORE" title="Xylem" width="271" height="57" class="img-responsive">
+                    </a>
+                    <i id="burger" class="fa fa-bars"></i>
+				</div>
+				<div id="head-search-box" class="col-sm-6">
+					<div id="header_search">
+						<form id="search_form" action="/lsearch.jhtm" method="post">
+<input name="searchIndexedCatId" value="20000" type="hidden" />
+							<div class="input-group search">
+								<button type="submit" class="fa fa-search"></button>
+								<input type="text" name="keywords" class="form-control" placeholder="search">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="my-account"><a href="/account.jhtm"><span class="fa fa-fw fa-user"></span> My Account</a></li>
+					<li id="shopping_cart">
+						<a href="/viewCart.jhtm" id="cart_link">
+							<span class="fa fa-fw fa-shopping-cart"></span> My Cart
+						</a>
+						<!-- <div id="cart-dropdown" style="display: none;">
+							<div id="cart-dropdown-header" class="clearfix">
+								<strong>Cart Items</strong>
+							</div>
+							<div id="cart-dropdown-items" class="clearfix">
+								<div class="product clearfix">
+									<div class="product_image">
+										<a href="#"><img src="/assets/Templates/80/img/products/cart_thumbs/product_1.jpg" class="img-responsive"></a>
+									</div>
+									<div class="product_name">
+										<a href="#">Product Name</a>
+									</div>
+									<div class="product_sku">
+										<a href="#">SKU123</a>
+									</div>
+									<div class="quantity_and_price">
+										<span class="quantity">1</span> x <span class="price">50$</span>
+									</div>
+								</div>
+								<div class="product clearfix">
+									<div class="product_image">
+										<a href="#"><img src="/assets/Templates/80/img/products/cart_thumbs/product_1.jpg" class="img-responsive"></a>
+									</div>
+									<div class="product_name">
+										<a href="#">Product Name</a>
+									</div>
+									<div class="product_sku">
+										<a href="#">SKU123</a>
+									</div>
+									<div class="quantity_and_price">
+										<span class="quantity">1</span> x <span class="price">75$</span>
+									</div>
+								</div>
+								<div class="product clearfix">
+									<div class="product_image">
+										<a href="#"><img src="/assets/Templates/80/img/products/cart_thumbs/product_1.jpg" class="img-responsive"></a>
+									</div>
+									<div class="product_name">
+										<a href="#">Product Name</a>
+									</div>
+									<div class="product_sku">
+										<a href="#">SKU123</a>
+									</div>
+									<div class="quantity_and_price">
+										<span class="quantity">1</span> x <span class="price">75$</span>
+									</div>
+								</div>
+							</div>
+							<div id="cart-dropdown-footer" class="clearfix">
+								<div class="total">
+									<strong>Total:</strong>
+									<span class="amount">$55</span>
+								</div>
+								<div class="buttons clearfix">
+									<a class="btn viewCart_btn" href="/viewCart.jhtm">View Cart</a>
+									<a class="btn checkout_btn" href="/checkout.jhtm">Checkout</a>
+								</div>
+							</div>
+						</div> -->
+					</li>
+				</ul>
+			</div>
+			<div id="head-drop-down" class="col-sm-12">
+
+			  <!-- Nav tabs -->
+			  <ul class="nav nav-tabs pull-right" role="tablist">
+			  	<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">HOME</a></li>
+			    <li role="presentation"><a href="#product" aria-controls="product" role="tab" data-toggle="tab">PRODUCTS</a></li>
+			    <!-- <li role="presentation"><a href="#price" aria-controls="price" role="tab" data-toggle="tab">SHOP BY PRICE</a></li>
+			    <li role="presentation"><a href="#mtof" aria-controls="mtof" role="tab" data-toggle="tab">MADE TO ORDER FAST</a></li> -->
+			  </ul>
+			  <div class="clearfix"></div>
+
+			  <!-- Tab panes -->
+			  <div class="tab-content main-nav">
+			  <div role="tabpanel" class="tab-pane row" id="home"></div>
+			    <div role="tabpanel" class="tab-pane row" id="product">
+
+			    	<div class="col-sm-4 category-nav">
+			    		<h4><a href="/category/20001/In-Stock.html">IN STOCK</a></h4>
+			    		<div class="row">
+			    			<div class="col-sm-12">	
+			    				<ul class="main-nav-uls">
+			    					<li><a href="/category/20060/Bags.html">Bags</a></li>
+									<li><a href="/category/20069/Concertor.html">Concertor</a></li>
+									<li><a href="/category/20005/Drinkware.html">Drinkware</a></li>
+									<li><a href="/category/20006/Office-Items.html">Office Items</a></li>
+                                    <li><a href="/category/20072/Sale.html">Sale Items</a></li>
+                                    <li><a href="/category/20122/Sensus.html">Sensus</a></li>	
+									<li><a href="/category/20058/Technology.html">Technology</a></li>
+									<li><a href="/category/20007/Tradeshow.html">Tradeshow</a></li>
+									<li><a href="/category/20059/Travel.html">Travel</a></li>
+									<li><a href="/category/20004/Wearables.html">Wearables</a></li>
+									<li><a href="/category/20067/Writing-Instruments.html">Writing Instruments</a></li>>
+			    				</ul>
+			    			</div>
+			    		</div>
+			    	</div>	    	
+			    
+			    	<div class="col-sm-4 category-nav">
+			    		<h4>SHOP BY PRICE</h4>
+			    		<div class="row">
+			    			<div class="col-sm-12">	
+			    				<ul class="main-nav-uls">
+			    					<li><a href="/lsearch.jhtm?cid=&hideSearchBox=false&keywords=XYL&minPrice=0&maxPrice=1">Under $1.00</a></li>
+			    					<li><a href="/lsearch.jhtm?cid=&hideSearchBox=false&keywords=XYL&minPrice=1&maxPrice=4.99">$1.00 - $4.99</a></li>
+			    					<li><a href="/lsearch.jhtm?cid=&hideSearchBox=false&keywords=XYL&minPrice=5&maxPrice=9.99">$5.00 - $9.99</a></li>
+			    					<li><a href="/lsearch.jhtm?cid=&hideSearchBox=false&keywords=XYL&minPrice=10&maxPrice=9999999">$10.00 and up</a></li>
+			    				</ul>
+			    			</div>
+			    		</div>
+			    	</div>
+
+			    	<div class="col-sm-4 category-nav">
+			    		<h4><a href="/category/20002/Made-To-Order-Fast.html">MADE TO ORDER FAST</a></h4>
+			    		<div class="row">
+			    			<div class="col-sm-12">	
+			    				<ul class="main-nav-uls">
+			    					<li><a href="/category/20061/Bags.html">Bags</a></li>
+									<li><a href="/category/20009/Drinkware.html">Drinkware</a></li>
+									<li><a href="/category/20066/Lifestyle.html">Lifestyle</a></li>
+									<li><a href="/category/20010/Office-Items.html">Office Items</a></li>
+									<li><a href="/category/20063/Technology.html">Technology</a></li>
+									<li><a href="/category/20064/Tools.html">Tools</a></li>
+									<li><a href="/category/20011/Tradeshow.html">Tradeshow</a></li>
+									<li><a href="/category/20008/Wearables.html">Wearables</a></li>
+									<li><a href="/category/20068/Writing-Instruments.html">Writing Instruments</a></li>
+                                                                 <li><a href="/category/20161/Xylem-Safety.html">Xylem Safety</a></li>
+			    				</ul>
+			    			</div>
+			    		</div>
+			    	</div>
+
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(function(){
+			// Shoping cart SHOW/HIDE
+			// --------------------------------------------------
+			$("#shopping_cart #cart_link").hover(
+				function(){
+					$("#cart-dropdown").stop().slideDown("fast", function(){
+						if(!$("#cart-dropdown").hasClass("is-loading")) {
+							$("#cart-dropdown").addClass("is-loading").showLoading();
+							// $.ajax({
+							// 	url: "/viewMiniCart.jhtm",
+							// 	type: "GET",
+							// 	dataType: "html",
+							// 	success: function (data) {
+								$("#cart-dropdown").removeClass("is-loading").hideLoading();
+							// 		$("#cart-dropdown").html(data).height('auto');
+							// 	},
+							// 	error: function() {
+							// 		$("#cart-dropdown").removeClass("is-loading").hideLoading();
+							// 		$("#cart-dropdown").html('<div class="error-message">Error Loading Cart</div>').height('auto');
+							// 	}
+							// });
+						}                                                       
+					});
+				},
+				function (){
+					if(!$("#cart-dropdown").hasClass("is-loading")) {
+						$("#cart-dropdown").stop().slideUp("fast");
+					}
+				}
+				);
+			$("#cart-dropdown").hover(
+				function(){
+					$("#cart-dropdown").stop().slideDown("fast");
+				},
+				function(){
+					if(!$("#cart-dropdown").hasClass("is-loading")) {
+						$("#cart-dropdown").stop().slideUp("fast");
+					}
+				}
+				);
+	});
+
+	$(function() {
+		var searchSuggestionEngine = new Bloodhound({
+			datumTokenizer: Bloodhound.tokenizers.whitespace,
+			queryTokenizer: Bloodhound.tokenizers.whitespace,
+			remote: {
+				url: '/show-ajax-autoComplete.jhtm?value=%QUERY',
+				wildcard: '%QUERY'
+			}
+		});
+
+		$('input.typeahead').typeahead({
+			hint: true,
+			highlight: true,
+			minLength: 1
+		}, {
+			name: 'suggestions',
+			source: searchSuggestionEngine
+		});
+    });
+    
+    $(document).ready(function(){
+    $('#burger').click(function(){
+        if( $('#burger').hasClass('by-stuff') ){
+            $('#header_search, #my-account, #shopping_cart, #head-drop-down').css('display', 'none')
+            $('#burger').removeClass('by-stuff')
+        } else {
+            $('#header_search, #my-account, #shopping_cart, #head-drop-down').css('display', 'block')
+            $('#burger').addClass('by-stuff')
+        }
+    })
+})
+
+
+$(window).resize(function(){
+	if($("#burger").css('display') != 'block'){
+		$('#header_search, #my-account, #shopping_cart, #head-drop-down').css('display', 'block')
+		$('#burger').css('transform', 'rotate(0deg)');
+	} else if($("#burger").css('display') == 'block'){
+		$('#header_search, #my-account, #shopping_cart, #head-drop-down').css('display', 'none')
+	}
+})
+
+$(document).ready(function(){
+  var path = location.pathname
+  if(path == "/category/20001/In-Stock.html" || path == '/category/20002/Made-To-Order-Fast.html' || path 
+  == '/category/20012/Custom-Product-Request.html'){
+	$('#head-drop-down').css('height', '42px');
+        $('.tab-content.main-nav').css('top','42px');
+        $('.tab-content.main-nav h4').css('margin-left','0px');
+	}
+});
+
+</script>
